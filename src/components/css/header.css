@@ -1,0 +1,147 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131921;
+  padding: 8px 10px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__menuIconContainer {
+  border: 1px solid #666666;
+  padding: 5px 6px;
+  border-radius: 3px;
+}
+
+.header__menuIcon {
+  color: white !important;
+  /* height: 30px !important; */
+}
+
+.header__logo {
+  /* height: 50px; */
+  width: 100px;
+  margin-left: 7px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #666666;
+  border-radius: 5px;
+  background-color: white;
+  /* width: 50%; */
+  flex: 0.5;
+}
+
+.header__search > input {
+  border: 0;
+  outline: 0;
+  flex: 1;
+}
+
+.header__searchIcon {
+  padding: 5px;
+  background-color: #febd69;
+  width: 30px !important;
+  height: 30px !important;
+  color: #333333 !important;
+}
+
+.header__search__filter {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  background-color: #f3f3f3;
+  font-size: small;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  flex: 0.32;
+  justify-content: space-between;
+}
+
+.header__right__option {
+  color: white;
+  padding: 0px 2px;
+}
+
+.header__right__option > p {
+  color: #a7acb2;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.header__right__downText {
+  display: flex;
+  position: relative;
+}
+
+.header__right__downText > p {
+  font-weight: 650;
+  font-size: 14px;
+  padding: 5px;
+  width: max-content;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.header__right__downIcon {
+  color: #a7acb2 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mt-3 {
+  margin-top: 20px;
+}
+
+.header__right__cart {
+  color: white !important;
+  width: 36px !important;
+  height: 36px !important;
+  margin-top: 5px;
+}
+
+.header__right__total {
+  font-size: 18px !important;
+  color: #f08804;
+  position: absolute;
+  right: 10px;
+}
+
+.mr-2 {
+  margin-right: 10px;
+}
+
+@media (max-width: 748px) {
+  .header__search {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .header__searchContainer {
+    background-color: #131921;
+    padding: 10px;
+  }
+
+  .removed {
+    display: none;
+  }
+}

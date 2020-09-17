@@ -1,0 +1,64 @@
+.payment {
+  background-color: white;
+}
+
+.payment__header {
+  text-align: center;
+  background-color: gray;
+  padding: 10px;
+}
+
+.payment__address {
+  display: flex;
+  /* border-bottom: 1px solid #cccccc; */
+  padding: 20px;
+}
+
+.payment__address > h2 {
+  flex: 0.15;
+}
+
+.payment__items {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.payment__item {
+  flex: 1;
+}
+
+.payment__address > h2 {
+  margin-right: 50px;
+}
+
+.payment__input {
+  padding: 10px;
+  background-color: gray;
+}
+
+.payment__input > input {
+  outline: 0;
+  border: 0;
+}
+
+.payment__stripe {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* min-width: 300px; */
+}
+
+.payment__stripe__card {
+  max-width: 360px;
+}
+
+.price__container {
+  display: block;
+}
+
+@media (max-width: 546px) {
+  .payment__address {
+    flex-direction: column;
+  }
+}

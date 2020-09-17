@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 
 import Header from "./components/Header";
@@ -12,6 +13,7 @@ import { auth } from "./firebase";
 import { useItemValue } from "./components/context/itemContext";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import DefaultRoute from "./components/common/DefaultRoute";
 
 const promise = loadStripe(
   "pk_test_51HPvTkHIvZBXIFxPsnbbLmFUTPPBkGylmMkU7pyCI6O2zfPlqqBRMHnWl7IRxoE9yvnoz0yZK5s6NzBYyMDLjRRM00ASRmYAxF"
@@ -30,26 +32,18 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ToastContainer hideProgressBar autoClose={1000} />
         <Switch>
           <Route path="/login" component={Login} />
-          <Route path="/checkout">
-            <Header />
-            <Checkout />
-          </Route>
+          <DefaultRoute path="/checkout" Component={Checkout} />
           <Route path="/payment">
             <Header />
             <Elements stripe={promise}>
               <Payment />
             </Elements>
           </Route>
-          <Route path="/orders">
-            <Header />
-            <Orders />
-          </Route>
-          <Route path="/">
-            <Header />
-            <Body />
-          </Route>
+          <DefaultRoute path="/orders" Component={Orders} />
+          <DefaultRoute path="/" Component={Body} />
         </Switch>
       </div>
     </Router>
