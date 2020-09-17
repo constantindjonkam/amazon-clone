@@ -27,14 +27,15 @@ function Body() {
         />
         <div className="body__row">
           {products.map(({ id, title, image, price, rating }) => (
-            <Product
-              key={id}
-              id={id}
-              title={title}
-              price={price}
-              image={image}
-              rating={rating}
-            />
+            <div className="body__product" key={id}>
+              <Product
+                id={id}
+                title={title}
+                price={price}
+                image={image}
+                rating={rating}
+              />
+            </div>
           ))}
         </div>
       </div>
